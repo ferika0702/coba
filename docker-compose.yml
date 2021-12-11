@@ -1,7 +1,7 @@
 version: '3.8'
 services:
     app:
-        image: (diubah terserah)
+        image: webSister
         container_name: web-server
         build:
             context: ./php
@@ -9,7 +9,7 @@ services:
         depends_on:
             - db
         volumes:
-            - ./php/nama-projek:/var/www/html/ (nama-projek diubah sesuai nama folder projek php)
+            - ./php/nama-projek:/var/www/html/Coba
         ports:
             - 8000:80
     db:
@@ -17,10 +17,10 @@ services:
         image: mysql
         restart: always
         environment:
-            MYSQL_ROOT_PASSWORD: MYSQL_ROOT_PASSWORD (diubah terserah)
-	    MYSQL_DATABASE: MYSQL_DATABASE (diubah terserah)
-            MYSQL_USER: MYSQL_USER (diubah terserah)
-            MYSQL_PASSWORD: MYSQL_PASSWORD (diubah terserah)
+            MYSQL_ROOT_PASSWORD:
+            MYSQL_DATABASE: TugasBesarWeb1
+            MYSQL_USER: root
+            MYSQL_PASSWORD: 
         ports:
             - "9906:3306"
 
